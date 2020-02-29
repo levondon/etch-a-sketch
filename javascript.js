@@ -1,14 +1,12 @@
 
-let gridSize = 100;
-//let mouseId = -1;
-
+let gridSize = 25;
 
 function clearScreen() {
     gridSize = 0
-    gridSize = parseInt(prompt('How many squares? Ex: enter 10 if you want a 10x10 grid', 100));
+    gridSize = parseInt(prompt('How many squares? Ex: enter 10 if you want a 10x10 grid', 25));
     console.log(typeof gridSize);
-    while((gridSize < 0) || (gridSize >= 200) || isNaN(gridSize)) {
-        gridSize = parseInt(prompt('Choose a grid size between 1 and 200'));
+    while((gridSize < 0) || (gridSize > 100) || isNaN(gridSize)) {
+        gridSize = parseInt(prompt('Choose a grid size between 1 and 100', 25));
     }
     
     const clearGrid = document.getElementById('containerDiv');
@@ -16,6 +14,17 @@ function clearScreen() {
     while(clearGrid.firstChild) {
         clearGrid.removeChild(clearGrid.lastChild)
     }
+    createGrid()
+}
+
+function sketch(event) {
+    if(event.target.id == 'grid') {
+        event.target.setAttribute('id', 'hovered');
+    }
+}
+
+function createGrid() {
+    console.log("HERE");
     for(let i = 0; i < gridSize**2; i++) {
         let container = document.getElementById('containerDiv')
         let div = document.createElement('div');
@@ -27,21 +36,16 @@ function clearScreen() {
     }
 }
 
-function sketch(event) {
-    if(event.target.id == 'grid') {
-        event.target.setAttribute('id', 'hovered');
-    }
-}
-
-for(let i = 0; i < gridSize**2; i++) {
+/*for(let i = 0; i < gridSize**2; i++) {
     let container = document.getElementById('containerDiv')
     let div = document.createElement('div');
     div.setAttribute('id', 'grid');
     div.classList.add('grid');
     container.appendChild(div);
-}
+}*/
 
-document.getElementById('clearBtn').addEventListener('click', clearScreen)
+document.addEventListener('DOMContentLoaded', createGrid);
+document.getElementById('clearBtn').addEventListener('click', clearScreen);
 document.addEventListener('mousemove', sketch);
 
 /*document.addEventListener('mousedown', mouseDown);
