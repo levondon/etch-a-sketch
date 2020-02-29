@@ -1,15 +1,22 @@
+:root {
+   --grid-size: 100
+}
+
 html, body {
    height: 100%;
    margin: 0
 }
 
-#container {
+#containerDiv {
     height: 100%;
-    background:lightblue;
     color: black;
     display: grid;
-    grid-template-columns: repeat(16, auto );
-    grid-template-rows: repeat(16, auto);
+    grid-template-columns: repeat(var(--grid-size), auto );
+    grid-template-rows: repeat(var(--grid-size), auto);
+}
+
+.clearBtn {
+   position: absolute;
 }
 
 #hovered {
