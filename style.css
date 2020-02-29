@@ -47,6 +47,6 @@
 }
 
 #hovered {
-   background-color: var(--rgb-color);
-   border-color: var(--rgb-color);
+   /*background-color: var(--rgb-color);
+   border-color: var(--rgb-color);*/
 }
