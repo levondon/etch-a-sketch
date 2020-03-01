@@ -3,6 +3,12 @@
    --rgb-color: rgb(0, 0, 0);
 }
 
+#titleDiv {
+   display: flex;
+   justify-content: center;
+   margin: auto;
+}
+
 #headDiv {
    display: flex;
    justify-content: center;
@@ -14,6 +20,35 @@
 .headDivItems {
    margin-left: 20px;
    margin-right: 20px;
+}
+
+#clearBtn {
+   color: rgb(0, 0, 0);
+   height: 30px;
+   margin-top: 10px;
+}
+
+#rgbBtn {
+   color: rgb(0, 0, 0);
+   height: 30px;
+   margin-top: 10px;
+}
+
+.red {
+   color: red;
+}
+
+.blue {
+   color: blue;
+}
+
+.green {
+   color: green;
+}
+
+#changeColor {
+   margin-top: 15px;
+   margin-left: 0px;
 }
 
 #containerDiv {
@@ -28,25 +63,7 @@
    grid-template-rows: repeat(var(--grid-size), auto);
 }
 
-#clearBtn {
-   color: red;
-   height: 30px;
-   margin-top: 10px;
-}
-
-#changeColor {
-   margin-top: 15px;
-   margin-left: 0px;
-}
-
-
-
 .grid {
    border: .5px solid;
    border-color: rgb(236, 236, 236);
-}
-
-#hovered {
-   /*background-color: var(--rgb-color);
-   border-color: var(--rgb-color);*/
 }
