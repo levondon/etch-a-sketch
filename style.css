@@ -3,13 +3,21 @@
    --rgb-color: rgb(0, 0, 0);
 }
 
+body {
+   background-image: radial-gradient(rgb(255, 255, 255) , lightblue , #083ef1 );
+}
+
 #titleDiv {
    display: flex;
    justify-content: center;
    margin: auto;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   text-shadow: 2px 2px 4px rgb(45, 172, 214);
 }
 
 #headDiv {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-shadow: 2px 2px 4px rgb(45, 172, 214);
    display: flex;
    justify-content: center;
    width: 640px;
@@ -23,12 +31,14 @@
 }
 
 #clearBtn {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    color: rgb(0, 0, 0);
    height: 30px;
    margin-top: 10px;
 }
 
 #rgbBtn {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    color: rgb(0, 0, 0);
    height: 30px;
    margin-top: 10px;
@@ -54,6 +64,7 @@
 #containerDiv {
    border: 1px solid;
    border-color: black;
+   background-color: white;
    margin: auto;
    width: 640px;
    height: 640px;
