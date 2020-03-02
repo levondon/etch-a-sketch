@@ -62,9 +62,15 @@ function chooseColor() {
 //color in the grid as random colors
 function chooseRgb() {
     if(rgb == 0) {
+        document.getElementById('red').className = 'red';
+        document.getElementById('green').className = 'green';
+        document.getElementById('blue').className = 'blue';
         rgb = 1
     } else {
         rgb = 0
+        document.getElementById('red').className = 'rgbOff';
+        document.getElementById('green').className = 'rgbOff';
+        document.getElementById('blue').className = 'rgbOff';
         color = document.getElementById('changeColor').value;
     }
 }

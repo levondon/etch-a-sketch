@@ -56,6 +56,10 @@ body {
    color: green;
 }
 
+.rgbOff {
+   color: black;
+}
+
 #changeColor {
    margin-top: 15px;
    margin-left: 0px;
